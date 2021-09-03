@@ -1,0 +1,15 @@
+JANUARY WEEK 1
+
+JANUARY is email
+january is login
+January is  text: "Login"
+JAN is users
+password is WEEK 1
+
+january1 is validate
+
+JanBtn is loginBtn
+
+db is dbjan
+smjan is sm
+WindowManagerJan is WindowManager

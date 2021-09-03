@@ -1,0 +1,1159 @@
+<JanuaryCreateWindow>:
+    name: "create"
+    
+    namee: namee
+    email: email
+    password: passw
+    namejan: sname
+
+    FloatLayout:
+        cols:1
+
+        FloatLayout:
+            size: root.width, root.height/2
+
+            Label:
+                text: "Create an Account"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":1}
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8}
+                text: "Name: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8}
+                size_hint: 0.4, 0.12
+                id: namee
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13}
+                text: "Email: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13}
+                size_hint: 0.4, 0.12
+                id: email
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13*2}
+                text: "Password: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+
+            TextInput:
+
+                pos_hint: {"x":0.5, "top":0.8-0.13*2}
+                size_hint: 0.4, 0.12
+                id: passw
+                multiline: False
+                password: True
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:                           
+                id: sname                        
+                multiline:True                   
+                text: root.showjan()
+                pos_hint: {"x":0}
+                background_color: 1,1,0,2
+                size_hint:1, 1
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.25}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "Already have an Account? Log In"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.login()
+
+        Button:
+            pos_hint:{"x":0.2,"y":0.05}
+            size_hint: 0.6, 0.15
+            text: "Submit"
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.manager.transition.direction = "left"
+                root.submit()
+###############################################################
+
+
+
+############################################
+
+
+
+<LoginWindow>:
+    name: "login"
+
+
+
+    FloatLayout:
+
+
+
+
+
+        Button:
+            pos_hint:{"x":0.1,"y":0.8}
+            size_hint: 0.2, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "JANUARY"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.createBtn()
+
+
+        Button:
+            pos_hint:{"x":0.1,"y":0.7}
+            size_hint: 0.2, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "FEBRUARY"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.FebBtn()
+
+        Button:
+            pos_hint:{"x":0.1,"y":0.6}
+            size_hint: 0.2, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "MARCH"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.MarchBtn()
+
+        Button:
+            pos_hint:{"x":0.1,"y":0.5}
+            size_hint: 0.2, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "APRIL"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.AprilBtn()
+
+        Button:
+            pos_hint:{"x":0.1,"y":0.4}
+            size_hint: 0.2, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "MAY"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.MayBtn()
+
+        Button:
+            pos_hint:{"x":0.1,"y":0.3}
+            size_hint: 0.2, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "JUNE"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.JuneBtn()
+        Button:
+            pos_hint:{"x":0.7,"y":0.8}
+            size_hint: 0.2, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "JULY"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.JulyBtn()
+
+        Button:
+            pos_hint:{"x":0.7,"y":0.7}
+            size_hint: 0.2, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "AUGUST"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.AugustBtn()
+
+        Button:
+            pos_hint:{"x":0.7,"y":0.6}
+            size_hint: 0.2, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "SEPTEMBER"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.SepetemberBtn()
+
+        Button:
+            pos_hint:{"x":0.7,"y":0.5}
+            size_hint: 0.2, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "OCTOBER"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.OctoberBtn()
+
+        Button:
+            pos_hint:{"x":0.7,"y":0.4}
+            size_hint: 0.2, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "NOVEMBER"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.NovemberBtn()
+
+        Button:
+            pos_hint:{"x":0.7,"y":0.3}
+            size_hint: 0.2, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "DECEMBER"
+            on_release:
+                root.manager.transition.direction = "right"
+                root.DecemberBtn()
+
+
+
+<MainWindow>:
+    n: n
+    email: email
+    created:created
+    january:january
+    FloatLayout:
+        Label:
+            id: n
+            pos_hint:{"x": 0.1, "top":0.9}
+            size_hint:0.8, 0.2
+            text: "Account Name: "
+
+        Label:
+            id: email
+            pos_hint:{"x": 0.1, "top":0.7}
+            size_hint:0.8, 0.2
+            text: "Email: "
+
+        Label:
+            id: created
+            pos_hint:{"x": 0.1, "top":0.5}
+            size_hint:0.8, 0.2
+            text: "Created: "
+
+        Label:
+            id: january
+            pos_hint:{"x": 0.1, "top":0.8}
+            size_hint:0.8, 0.2
+            text: "january: "
+
+###################################################
+
+<FebWindow>:
+    n: n
+    email: email
+    created:created
+    january:january
+    FloatLayout:
+        Label:
+            id: n
+            pos_hint:{"x": 0.1, "top":0.5}
+            size_hint:0.5, 0.2
+            text: "BB: "
+
+        Label:
+            id: email
+            pos_hint:{"x": 0.1, "top":0.7}
+            size_hint:0.8, 0.2
+            text: "Email: "
+
+        Label:
+            id: created
+            pos_hint:{"x": 0.1, "top":0.5}
+            size_hint:0.8, 0.2
+            text: "Created: "
+
+        Label:
+            id: january
+            pos_hint:{"x": 0.1, "top":0.8}
+            size_hint:0.8, 0.2
+            text: "january: "
+
+
+
+
+        Button:
+            pos_hint:{"x":0.2, "y": 0.1}
+            size_hint:0.6,0.2
+            text: "Log Out"
+            on_release:
+                app.root.current = "login"
+                root.manager.transition.direction = "down"
+
+############################################################
+<FebCreateWindow>:
+    name: "Febcreate"
+
+    namee: namee
+    email: email
+    password: passw
+    nameFeb: febu
+
+    FloatLayout:
+        cols:1
+
+        FloatLayout:
+            size: root.width, root.height/2
+
+            Label:
+                text: "Create an Account"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":1}
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8}
+                text: "Name: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8}
+                size_hint: 0.4, 0.12
+                id: namee
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13}
+                text: "Email: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13}
+                size_hint: 0.4, 0.12
+                id: email
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13*2}
+                text: "Password: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+
+
+            TextInput:
+
+                pos_hint: {"x":0.5, "top":0.8-0.13*2}
+                size_hint: 0.4, 0.12
+                id: passw
+                multiline: False
+                password: True
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                id: febu
+                multiline:True
+                text: root.showfeb()
+                pos_hint: {"x":0}
+                background_color: 0,1,0,2
+                size_hint:1, 1
+
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.25}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "BACK? Log In"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.login()
+
+        Button:
+            pos_hint:{"x":0.2,"y":0.05}
+            size_hint: 0.6, 0.15
+            text: "Submit"
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.manager.transition.direction = "left"
+                root.submit()
+
+
+                #########################################
+<MarchCreateWindow>:
+    name: "Marchcreate"
+
+    namee: namee
+    email: email
+    password: passw
+    nameFeb: march
+
+    FloatLayout:
+        cols:1
+
+        FloatLayout:
+            size: root.width, root.height/2
+
+            Label:
+                text: "Create an Account"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":1}
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8}
+                text: "Name: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8}
+                size_hint: 0.4, 0.12
+                id: namee
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13}
+                text: "Email: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13}
+                size_hint: 0.4, 0.12
+                id: email
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13*2}
+                text: "Password: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+
+
+            TextInput:
+
+                pos_hint: {"x":0.5, "top":0.8-0.13*2}
+                size_hint: 0.4, 0.12
+                id: passw
+                multiline: False
+                password: True
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                id: march
+                multiline:True
+                text: root.showmarch()
+                pos_hint: {"x":0}
+                background_color: 0,1,0,2
+                size_hint:1, 1
+
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.25}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "HOME? Log In"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.login()
+
+        Button:
+            pos_hint:{"x":0.2,"y":0.05}
+            size_hint: 0.6, 0.15
+            text: "Submit"
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.manager.transition.direction = "left"
+                root.submit()
+
+
+#######################################################
+
+<AprilCreateWindow>:
+    name: "Aprilcreate"
+
+    namee: namee
+    email: email
+    password: passw
+    nameFeb: April
+
+    FloatLayout:
+        cols:1
+
+        FloatLayout:
+            size: root.width, root.height/2
+
+            Label:
+                text: "Create an Account"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":1}
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8}
+                text: "Name: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8}
+                size_hint: 0.4, 0.12
+                id: namee
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13}
+                text: "Email: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13}
+                size_hint: 0.4, 0.12
+                id: email
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13*2}
+                text: "Password: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+
+
+            TextInput:
+
+                pos_hint: {"x":0.5, "top":0.8-0.13*2}
+                size_hint: 0.4, 0.12
+                id: passw
+                multiline: False
+                password: True
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                id: April
+                multiline:True
+                text: root.showApril()
+                pos_hint: {"x":0}
+                background_color: 0,1,0,2
+                size_hint:1, 1
+
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.25}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "HOME? Log In"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.login()
+
+        Button:
+            pos_hint:{"x":0.2,"y":0.05}
+            size_hint: 0.6, 0.15
+            text: "Submit"
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.manager.transition.direction = "left"
+                root.submit()
+
+
+#######################################################
+
+#######################################################
+
+<MayCreateWindow>:
+    name: "Maycreate"
+
+    namee: namee
+    email: email
+    password: passw
+    nameFeb: May
+
+    FloatLayout:
+        cols:1
+
+        FloatLayout:
+            size: root.width, root.height/2
+
+            Label:
+                text: "Create an Account"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":1}
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8}
+                text: "Name: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8}
+                size_hint: 0.4, 0.12
+                id: namee
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13}
+                text: "Email: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13}
+                size_hint: 0.4, 0.12
+                id: email
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13*2}
+                text: "Password: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+
+
+            TextInput:
+
+                pos_hint: {"x":0.5, "top":0.8-0.13*2}
+                size_hint: 0.4, 0.12
+                id: passw
+                multiline: False
+                password: True
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                id: May
+                multiline:True
+
+                pos_hint: {"x":0}
+                background_color: 0,1,0,2
+                size_hint:1, 1
+
+
+        Button:
+            pos_hint:{"x":0.5,"y":0.3}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "HOME"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.login()
+        Button:
+            pos_hint:{"x":0.1,"y":0.8}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "MAY WEEK 1"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.MayWeek1Btn()
+        Button:
+            pos_hint:{"x":0.1,"y":0.6}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "MAY WEEK 2"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.MayWeek2Btn()
+
+        Button:
+            pos_hint:{"x":0.1,"y":0.4}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "MAY WEEK 3"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.MayWeek3Btn()
+
+        Button:
+            pos_hint:{"x":0.1,"y":0.2}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "MAY WEEK 4"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.MayWeek4Btn()
+
+
+
+#######################################################
+<Mayweek1Window>:
+    name: "Mayweek1"
+
+    namee: namee
+    email: email
+    password: passw
+    nameFeb: Mayweek1
+
+    FloatLayout:
+        cols:1
+
+        FloatLayout:
+            size: root.width, root.height/2
+
+            Label:
+                text: "Create an Account"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":1}
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8}
+                text: "Name: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8}
+                size_hint: 0.4, 0.12
+                id: namee
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13}
+                text: "Email: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13}
+                size_hint: 0.4, 0.12
+                id: email
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13*2}
+                text: "Password: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+
+
+            TextInput:
+
+                pos_hint: {"x":0.5, "top":0.8-0.13*2}
+                size_hint: 0.4, 0.12
+                id: passw
+                multiline: False
+                password: True
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                id: Mayweek1
+                multiline:True
+                text: root.showMayweek1()
+                pos_hint: {"x":0}
+                background_color: 0,1,0,2
+                size_hint:1, 1
+
+
+        Button:
+            pos_hint:{"x":0.8,"y":0.25}
+            size_hint: 0.1, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "HOME"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.login()
+
+        Button:
+            pos_hint:{"x":0.2,"y":0.25}
+            size_hint: 0.1, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "BACK"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.Maycreate()
+
+
+#######################################################
+<Mayweek2Window>:
+    name: "Mayweek2"
+
+    namee: namee
+    email: email
+    password: passw
+    nameFeb: Mayweek2
+
+    FloatLayout:
+        cols:1
+
+        FloatLayout:
+            size: root.width, root.height/2
+
+            Label:
+                text: "Create an Account"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":1}
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8}
+                text: "Name: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8}
+                size_hint: 0.4, 0.12
+                id: namee
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13}
+                text: "Email: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13}
+                size_hint: 0.4, 0.12
+                id: email
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13*2}
+                text: "Password: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+
+
+            TextInput:
+
+                pos_hint: {"x":0.5, "top":0.8-0.13*2}
+                size_hint: 0.4, 0.12
+                id: passw
+                multiline: False
+                password: True
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                id: Mayweek2
+                multiline:True
+                text: root.showMayweek2()
+                pos_hint: {"x":0}
+                background_color: 0,1,0,2
+                size_hint:1, 1
+
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.25}
+            size_hint: 0.8, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "BACK"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.Maycreate()
+
+#######################################################
+<Mayweek3Window>:
+    name: "Mayweek3"
+
+    namee: namee
+    email: email
+    password: passw
+    nameFeb: Mayweek3
+
+    FloatLayout:
+        cols:1
+
+        FloatLayout:
+            size: root.width, root.height/2
+
+            Label:
+                text: "Create an Account"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":1}
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8}
+                text: "Name: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8}
+                size_hint: 0.4, 0.12
+                id: namee
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13}
+                text: "Email: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13}
+                size_hint: 0.4, 0.12
+                id: email
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13*2}
+                text: "Password: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+
+
+            TextInput:
+
+                pos_hint: {"x":0.5, "top":0.8-0.13*2}
+                size_hint: 0.4, 0.12
+                id: passw
+                multiline: False
+                password: True
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                id: Mayweek3
+                multiline:True
+                text: root.showMayweek3()
+                pos_hint: {"x":0}
+                background_color: 0,1,0,2
+                size_hint:1, 1
+
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.25}
+            size_hint: 0.8, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "BACK"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.Maycreate()
+
+
+#######################################################
+<Mayweek4Window>:
+    name: "Mayweek4"
+
+    namee: namee
+    email: email
+    password: passw
+    nameFeb: Mayweek4
+
+    FloatLayout:
+        cols:1
+
+        FloatLayout:
+            size: root.width, root.height/2
+
+            Label:
+                text: "Create an Account"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":1}
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8}
+                text: "Name: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8}
+                size_hint: 0.4, 0.12
+                id: namee
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13}
+                text: "Email: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13}
+                size_hint: 0.4, 0.12
+                id: email
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13*2}
+                text: "Password: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+
+
+            TextInput:
+
+                pos_hint: {"x":0.5, "top":0.8-0.13*2}
+                size_hint: 0.4, 0.12
+                id: passw
+                multiline: False
+                password: True
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                id: Mayweek4
+                multiline:True
+                text: root.showMayweek4()
+                pos_hint: {"x":0}
+                background_color: 0,1,0,2
+                size_hint:1, 1
+
+
+        Button:
+            pos_hint:{"x":0.3,"y":0.25}
+            size_hint: 0.8, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "BACK"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.Maycreate()
+
+
+#######################################################
+#######################################################
+###########################################################################################
+
+<JuneCreateWindow>:
+    name: "Junecreate"
+
+    namee: namee
+    email: email
+    password: passw
+    nameFeb: June
+
+    FloatLayout:
+        cols:1
+
+        FloatLayout:
+            size: root.width, root.height/2
+
+            Label:
+                text: "Create an Account"
+                size_hint: 0.8, 0.2
+                pos_hint: {"x":0.1, "top":1}
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8}
+                text: "Name: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8}
+                size_hint: 0.4, 0.12
+                id: namee
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13}
+                text: "Email: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                pos_hint: {"x":0.5, "top":0.8-0.13}
+                size_hint: 0.4, 0.12
+                id: email
+                multiline: False
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            Label:
+                size_hint: 0.5,0.12
+                pos_hint: {"x":0, "top":0.8-0.13*2}
+                text: "Password: "
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+
+
+            TextInput:
+
+                pos_hint: {"x":0.5, "top":0.8-0.13*2}
+                size_hint: 0.4, 0.12
+                id: passw
+                multiline: False
+                password: True
+                font_size: (root.width**2 + root.height**2) / 14**4
+
+            TextInput:
+                id: June
+                multiline:True
+
+                pos_hint: {"x":0}
+                background_color: 0,1,0,2
+                size_hint:1, 1
+
+
+        Button:
+            pos_hint:{"x":0.5,"y":0.3}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "HOME"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.login()
+        Button:
+            pos_hint:{"x":0.1,"y":0.8}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "JUNE WEEK 1"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.JuneWeek1Btn()
+        Button:
+            pos_hint:{"x":0.1,"y":0.6}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "JUNE WEEK 2"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.JuneWeek2Btn()
+
+        Button:
+            pos_hint:{"x":0.1,"y":0.4}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "JUNE WEEK 3"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.JuneWeek3Btn()
+
+        Button:
+            pos_hint:{"x":0.1,"y":0.2}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 17**4
+            text: "JUNE WEEK 4"
+            on_release:
+                root.manager.transition.direction = "left"
+                root.JuneWeek4Btn()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
